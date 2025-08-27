@@ -727,7 +727,7 @@ class GyaanSetu {
         apiUrl = "https://aipipe.org/openrouter/v1/chat/completions";
         headers.Authorization = `Bearer ${apiKey}`;
         body = {
-          model: model || "openai/gpt-4o-mini", // fallback
+          model: model || "openai/gpt-4.1-nano", // fallback
           messages: messagesForApi.map((m) => ({
             role: m.role,
             content: m.content,
@@ -1760,3 +1760,4 @@ class GyaanSetu {
 document.addEventListener("DOMContentLoaded", () => {
   window.agentFlow = new GyaanSetu();
 });
+
